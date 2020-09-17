@@ -32,11 +32,11 @@ class Rover {
   }
 
   facingSouth() {
-    return this.direction === "E";
+    return this.direction === "S";
   }
 
   facingWest() {
-    return this.direction === "E";
+    return this.direction === "W";
   }
 
   returnCoordinates() {
