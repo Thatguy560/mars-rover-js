@@ -4,7 +4,7 @@ const plateauBorders = [0, 5];
 
 const left = { N: "W", E: "N", S: "E", W: "S" };
 
-const right = {};
+const right = { N: "E", E: "S", S: "W", W: "N" };
 
 class Rover {
   constructor(x, y, direction) {
@@ -37,6 +37,10 @@ class Rover {
 
   facingWest() {
     return this.direction === "E";
+  }
+
+  returnCoordinates() {
+    console.log(`Rover co-ordinates are ${x}, ${y} facing ${direction}`);
   }
 }
 
