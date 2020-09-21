@@ -56,7 +56,7 @@ class Rover {
   }
 
   returnCoordinates() {
-    return `Rover co-ordinates are ${x}, ${y} facing ${direction}`;
+    return `Rover co-ordinates are ${this.x}, ${this.y} facing ${this.direction}`;
   }
 }
 

@@ -1,5 +1,4 @@
 "use strict";
-
 const Rover = require("../src/rover.js");
 
 describe("Rover", () => {
@@ -102,5 +101,38 @@ describe("Rover", () => {
       rover.turn("L");
       expect(rover.direction).toEqual("S");
     });
+  });
+
+  describe("For when the rover is turning right", () => {
+    it("will turn East when facing North", () => {
+      let rover = new Rover(3, 3, "N");
+      rover.turn("R");
+      expect(rover.direction).toEqual("E");
+    });
+
+    it("will turn South when facing East", () => {
+      let rover = new Rover(3, 3, "E");
+      rover.turn("R");
+      expect(rover.direction).toEqual("S");
+    });
+
+    it("will turn West when facing South", () => {
+      let rover = new Rover(3, 3, "S");
+      rover.turn("R");
+      expect(rover.direction).toEqual("W");
+    });
+
+    it("will turn North when facing West", () => {
+      let rover = new Rover(3, 3, "W");
+      rover.turn("R");
+      expect(rover.direction).toEqual("N");
+    });
+  });
+
+  it("will allow you to check the rover's current position at any given time.", () => {
+    let rover = new Rover(4, 4, "S");
+    expect(rover.returnCoordinates()).toEqual(
+      "Rover co-ordinates are 4, 4 facing S"
+    );
   });
 });
