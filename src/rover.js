@@ -16,16 +16,27 @@ class Rover {
   move(input) {
     if (this.facingNorth() && input === "M" && !(this.y >= plateauBorders[1])) {
       this.y++;
-      // console.log(plateauBorders[1]);
     }
-    // this.x++;
-    // this.y--;
-    // this.x--;
-    console.log(this);
+    if (this.facingEast() && input === "M" && !(this.x >= plateauBorders[1])) {
+      this.x++;
+    }
+    if (this.facingSouth() && input === "M" && !(this.y <= plateauBorders[0])) {
+      this.y--;
+    }
+    if (this.facingWest() && input === "M" && !(this.x <= plateauBorders[0])) {
+      this.x--;
+    }
+    return this;
   }
 
   turn(input) {
-    console.log(this);
+    if (input === "L") {
+      this.direction = left[this.direction];
+    }
+    if (input === "R") {
+      this.direction = right[this.direction];
+    }
+    return this;
   }
 
   facingNorth() {
@@ -45,7 +56,7 @@ class Rover {
   }
 
   returnCoordinates() {
-    console.log(`Rover co-ordinates are ${x}, ${y} facing ${direction}`);
+    return `Rover co-ordinates are ${x}, ${y} facing ${direction}`;
   }
 }
 
