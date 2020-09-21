@@ -13,13 +13,18 @@ class Rover {
     this.direction = direction;
   }
 
-  move() {
-    if (this.facingNorth()) {
-      this.y += 1;
+  move(input) {
+    if (this.facingNorth() && input === "M" && !(this.y >= plateauBorders[1])) {
+      this.y++;
+      // console.log(plateauBorders[1]);
     }
-    // this.x += 1;
-    // this.y -= 1;
-    // this.x -= 1;
+    // this.x++;
+    // this.y--;
+    // this.x--;
+    console.log(this);
+  }
+
+  turn(input) {
     console.log(this);
   }
 
