@@ -32,8 +32,7 @@ class Rover {
   turn(input) {
     if (input === "L") {
       this.direction = left[this.direction];
-    }
-    if (input === "R") {
+    } else if (input === "R") {
       this.direction = right[this.direction];
     }
     return this;
