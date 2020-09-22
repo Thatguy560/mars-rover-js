@@ -39,7 +39,6 @@ describe("Rover", () => {
         rover.move("M");
       }
       expect(rover.x).toEqual(5);
-      // console.log(rover.plateauBorders[1]);
     });
   });
 
@@ -56,7 +55,6 @@ describe("Rover", () => {
         rover.move("M");
       }
       expect(rover.y).toEqual(0);
-      // console.log(rover.plateauBorders[0]);
     });
   });
 
@@ -73,7 +71,6 @@ describe("Rover", () => {
         rover.move("M");
       }
       expect(rover.x).toEqual(0);
-      // console.log(rover.plateauBorders[0]);
     });
   });
 
@@ -81,25 +78,25 @@ describe("Rover", () => {
     it("will turn West when facing North", () => {
       let rover = new Rover(3, 3, "N");
       rover.turn("L");
-      expect(rover.direction).toEqual("W");
+      expect(rover.direction).toBe("W");
     });
 
     it("will turn North when facing East", () => {
       let rover = new Rover(3, 3, "E");
       rover.turn("L");
-      expect(rover.direction).toEqual("N");
+      expect(rover.direction).toBe("N");
     });
 
     it("will turn East when facing South", () => {
       let rover = new Rover(3, 3, "S");
       rover.turn("L");
-      expect(rover.direction).toEqual("E");
+      expect(rover.direction).toBe("E");
     });
 
     it("will turn South when facing West", () => {
       let rover = new Rover(3, 3, "W");
       rover.turn("L");
-      expect(rover.direction).toEqual("S");
+      expect(rover.direction).toBe("S");
     });
   });
 
@@ -107,32 +104,32 @@ describe("Rover", () => {
     it("will turn East when facing North", () => {
       let rover = new Rover(3, 3, "N");
       rover.turn("R");
-      expect(rover.direction).toEqual("E");
+      expect(rover.direction).toBe("E");
     });
 
     it("will turn South when facing East", () => {
       let rover = new Rover(3, 3, "E");
       rover.turn("R");
-      expect(rover.direction).toEqual("S");
+      expect(rover.direction).toBe("S");
     });
 
     it("will turn West when facing South", () => {
       let rover = new Rover(3, 3, "S");
       rover.turn("R");
-      expect(rover.direction).toEqual("W");
+      expect(rover.direction).toBe("W");
     });
 
     it("will turn North when facing West", () => {
       let rover = new Rover(3, 3, "W");
       rover.turn("R");
-      expect(rover.direction).toEqual("N");
+      expect(rover.direction).toBe("N");
     });
   });
 
   it("will allow you to check the rover's current position at any given time.", () => {
     let rover = new Rover(4, 4, "S");
-    expect(rover.returnCoordinates()).toEqual(
-      "Rover co-ordinates are 4, 4 facing S"
+    expect(rover.returnCoordinates()).toBe(
+      "Rover co-ordinates are 4, 4 facing S."
     );
   });
 });
