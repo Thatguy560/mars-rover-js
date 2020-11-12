@@ -1,15 +1,21 @@
 {
   "name": "mars-rover",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel rover.js -d dist",
+    "start": "npm run build && node dist/rover.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "jest": "^26.4.2"
   }
 }

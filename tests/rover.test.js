@@ -1,5 +1,6 @@
 "use strict";
-const Rover = require("../src/rover.js");
+import Rover from "../src/rover.js";
+// const Rover = require("../src/rover.js");
 
 describe("Rover", () => {
   it("will let you create a new rover with any given co-ordinates and direction.", () => {
