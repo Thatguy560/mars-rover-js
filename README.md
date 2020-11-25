@@ -32,6 +32,16 @@ MMRMMRMRRM
 
 5 1 E
 
+# Preparation
+
+![Example1](Assets/Example1.jpg)
+
+![Example2](Assets/Example2.jpg)
+
+![Planning](Assets/Planning.jpg)
+
+![Planning2](Assets/Planning2.jpg)
+
 # User Stories
 
 ```
@@ -57,8 +67,8 @@ I want to be able to check the rovers co-ordinates and heading.
 
 # To Run
 
-```Javascript
-git clone https://github.com/Thatguy560/mars-rover-js.git
+```JavaScript
+git clone "https://github.com/Thatguy560/mars-rover-js.git"
 
 cd mars-rover-js
 
